@@ -5,7 +5,6 @@
     </router-link>
     <!-- router-view将index.js里面的路由规则 在当前页面上匹配到的渲染出来 -->
     <router-view></router-view>
-    <common_one/>
   </div>
 </template>
 
@@ -21,6 +20,9 @@ export default {
   methods: {},
   created() {
     console.log(this.$route.params.aaa);
+    window.eventBus.$on("event", value => {
+      console.log(value);
+    });
   },
   mounted() {}
 };

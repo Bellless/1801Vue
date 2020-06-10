@@ -13,6 +13,8 @@ import axios from 'axios'
 // 挂载到vue的原型
 Vue.prototype.$http = axios
 
+window.eventBus = new Vue();
+
 Vue.config.productionTip = false
 
 new Vue({

@@ -47,7 +47,7 @@
       </div>
     </div>
     <p :class="tr?'h3one':'h3two'">000000</p>
-    <button @click="on">改变</button>
+    <button @click="on">改变字体颜色</button>
     <!-- a标签跳转 能跳转到对应的vue文件中去 但是a标签跳转的方式 里面的内容不会显示出来 -->
     <!-- router-link方式跳转 -->
     <!-- to里面放的就是我们路由规则里面的path路径 -->
@@ -66,7 +66,7 @@
     <router-link :to="{path:'/four',query:{arrayss}}">
       <p>router-link第二种跳转方式</p>
     </router-link>
-    <button @click="button1">读</button>
+    <button @click="button1">动态跳转路由</button>
     <router-link to="/review">
       <h2>跳到review页面</h2>
     </router-link>

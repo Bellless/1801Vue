@@ -12,12 +12,16 @@ export default {
   components: {},
   props: {},
   data() {
-    return {};
+    return {
+      txt: "这是子组件传递的参数"
+    };
   },
   watch: {},
   computed: {},
   methods: {
     fnClose() {
+      // this.$emit('acprop',txt)
+      window.eventBus.$emit("event", this.txt);
       // 路由嵌套中 返回上一级路由
       this.$router.go(-1);
       // 动态跳转到指定路由（页面）中
@@ -30,7 +34,7 @@ export default {
     // this.$router.push({path:"要跳转的路径"})
     // 获取传递的参数
     // this.$route.params.txt
-    console.log(this.$route.params.arrayss);
+    // console.log(this.$route.params.arrayss);
   },
   mounted() {}
 };
