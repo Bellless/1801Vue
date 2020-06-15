@@ -1,11 +1,10 @@
 <template>
+<!-- app.vue的页面结构是公用的始终会出现在任何页面中, -->
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/stylusText">stylus测试 |</router-link>
-      <router-link to="/styleTwo">styes测试2</router-link>
-    </div>
+    <!-- <div id="nav">
+      
+      <router-link to="/one2">知识点回顾</router-link>
+    </div> -->
     <router-view/>
   </div>
 </template>

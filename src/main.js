@@ -6,6 +6,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// 移动端项目一般采用淘宝的适配方案 （flexible） 安装>>全局引用
+
 // 安装其他插件的时候，可以直接在 main.js 中引入并使用 Vue.use()来注册，
 // 但是 axios并不是vue插件，所以不能使用Vue.use()，所以只能在每个需要发送请求的组件中即时引入。
 // 为了解决这个问题，我们在引入 axios 之后，通过修改原型链，来更方便的使用。
@@ -13,6 +15,8 @@ import axios from 'axios'
 // 挂载到vue的原型
 Vue.prototype.$http = axios
 
+// 全局引入淘宝适配方案
+import 'lib-flexible';
 window.eventBus = new Vue();
 
 Vue.config.productionTip = false

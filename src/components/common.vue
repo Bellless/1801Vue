@@ -1,7 +1,7 @@
 <template>
   <div class="one">
     <p>
-      这是公用的组件
+      这是公用的组件{{users[0].name}}
     </p>
     <!-- vue中有一个$emit的机制从子组件传递参数给父组件 -->
     <!-- 子组件中的写法是  $emit('acprop',要传递的参数) -->
@@ -11,7 +11,7 @@
       2.引入的组件中 绑定一个@acprop="自定义方法名" 例如common_one @acprop="自定义方法名"/>
       3.要把@acprop里面的自定义方法名拿到crated里面书写
       4.@acprop里面的自定义方法中有一个val参数，这个参数就是子组件传递过来的参数 -->
-    <button @click="fnToparent">像父组件传递值</button>
+    <button @click="fnToparent">向父组件传递值</button>
   </div>
 </template>
 
@@ -19,7 +19,10 @@
 export default {
   components: {},
   props: {
-    // message
+    users: {
+      type: Array,
+      required: true
+    }
   },
   data() {
     return {

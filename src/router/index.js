@@ -4,14 +4,15 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import One from '../views/one.vue'
 import to from '../views/to.vue'
-import tanchuan from '../views/tanchuan.vue'
+import tanchuan from '../views/eventBus/tanchuan.vue'
 import four from '../views/four.vue'
-import fors from '../views/fors.vue'
+import fors from '../views/eventBus/fors.vue'
 import five from '../views/five.vue'
 import review from '../views/review.vue'
 import six from '../views/six.vue'
 import stylusText from '../views/stylusText.vue'
 import styleTwo from '../views/styleTwo.vue'
+
 
 // vue要想使用公用的组件 
 // 第一个步骤先在router文件夹下面index.js文件里面引入文件
@@ -108,6 +109,12 @@ const routes = [
         path: "/styleTwo",
         name: 'styleTwo',
         component: styleTwo,
+    }, {
+        path: "/one2",
+        name: 'one2',
+        // 路由懒加载（ 需要的时候才加载进来 不需要的时候不加载）
+        component: () =>
+            import ('../views/6.15projectTxt/one.vue')
     }
 
 ]

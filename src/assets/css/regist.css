@@ -1,0 +1,66 @@
+.signUpforpagetitle {
+    margin-top: 3rem;
+    font-size: .43rem;
+    color: #3C9FF9;
+}
+
+
+/* 账号 */
+
+.signUpforUniversalTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signUpforUniversal {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.accountIcon {
+    width: .666667rem;
+    height: .666667rem;
+}
+
+.sccountEntryboxtwo {
+    width: 75%;
+    /* 去除未选中状态边框 */
+    border: 0;
+    /* 去除选中状态边框 */
+    outline: none;
+    /* 透明背景 */
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.cerificationCode {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.getAverificationcodebutton {
+    color: #0A86F8;
+}
+
+.registerButtonborder {
+    display: flex;
+    justify-content: center;
+}
+
+.signpbutton {
+    margin-top: 1.6rem;
+    background-color: #0079F8;
+    width: 80%;
+    height: 1.066667rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .106667rem;
+}
+
+.registerFonts {
+    font-size: .533333rem;
+    color: #fff;
+}

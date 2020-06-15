@@ -23,14 +23,18 @@
     <br>
     <!-- <router-link to='six'>二级路由(打开子组件)</router-link> -->
     <router-view></router-view>
-    <common_one @acprop='childToParent'/>
+    <common_one @acprop='childToParent' :users='users' />
+    <router-link to="/one2">
+    <button>登录</button>
+    </router-link><br>
+    <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/stylusText">stylus测试 |</router-link>
+      <router-link to="/styleTwo">styes测试2 |</router-link>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import { log } from "util";
-
 export default {
   name: "Home",
   components: {},
@@ -45,7 +49,8 @@ export default {
       h2: "这是data里面的数据",
       checked: false,
       checkedtwo: "",
-      message: "这是父组件传递的参数"
+      message: "这是父组件传递的参数",
+      users: [{ id: 1, name: "Henry" }, { id: 2, name: "Tom" }]
     };
   },
   // 就是用来写方法 写事件
