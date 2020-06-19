@@ -25,12 +25,21 @@
     <router-view></router-view>
     <common_one @acprop='childToParent' :users='users' />
     <router-link to="/one2">
-    <button>登录</button>
+      <button>登录</button>
     </router-link><br>
+    <router-link to="parent">
+      <button>父子组件传参测试</button>
+    </router-link>
+    <br>
     <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/stylusText">stylus测试 |</router-link>
-      <router-link to="/styleTwo">styes测试2 |</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/stylusText">stylus测试 |</router-link>
+    <router-link to="/styleTwo">styes测试2 |</router-link>
+    <!-- 路由传参 -->
+    <!-- 1.父传参到子组件 -->
+    <!-- 2.子组件传参到父组件 -->
+    <!-- 3.兄弟组件传参 -->
+    <!-- 父子组件传参测试 -->
   </div>
 </template>
 

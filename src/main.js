@@ -17,6 +17,7 @@ Vue.prototype.$http = axios
 
 // 全局引入淘宝适配方案
 import 'lib-flexible';
+// 全局声明挂载eventBus机制
 window.eventBus = new Vue();
 
 Vue.config.productionTip = false

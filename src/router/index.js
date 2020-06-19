@@ -12,7 +12,7 @@ import review from '../views/review.vue'
 import six from '../views/six.vue'
 import stylusText from '../views/stylusText.vue'
 import styleTwo from '../views/styleTwo.vue'
-
+import child from '../views/父子组件传参/child.vue'
 
 // vue要想使用公用的组件 
 // 第一个步骤先在router文件夹下面index.js文件里面引入文件
@@ -27,6 +27,8 @@ import common from '../components/common.vue'
 Vue.component("common_one", common)
 
 Vue.component("common_six", six)
+
+Vue.component('childs', child)
 
 
 Vue.use(VueRouter)
@@ -115,8 +117,13 @@ const routes = [
         // 路由懒加载（ 需要的时候才加载进来 不需要的时候不加载）
         component: () =>
             import ('../views/6.15projectTxt/one.vue')
-    }
-
+    }, {
+        path: "/parent",
+        name: 'parent',
+        // 路由懒加载（ 需要的时候才加载进来 不需要的时候不加载）
+        component: () =>
+            import ('../views/父子组件传参/parent.vue')
+    },
 ]
 
 const router = new VueRouter({

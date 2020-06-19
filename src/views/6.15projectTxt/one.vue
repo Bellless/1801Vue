@@ -29,7 +29,7 @@
           <p>账号注册</p>
         </div>
       </div>
-      <div class="host" >
+      <div class="host">
         <img src="..\..\assets\img\login\phone.png" alt="" class="hostImg">
         <input type="text" class="ipt">
         <img src="..\..\assets\img\login\close.png" alt="" class="hostImg">
@@ -74,13 +74,15 @@ export default {
 
 .host {
   common_Cls();
-  justify-content space-between;
-  border-bottom 1px solid blue;
+  justify-content: space-between;
+  border-bottom: 1px solid blue;
+
   .hostImg {
-    width 0.8rem;
+    width: 0.8rem;
   }
-  .ipt{
-    }
+
+  .ipt {
+  }
 }
 </style>
 
