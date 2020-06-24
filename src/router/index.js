@@ -7,6 +7,7 @@ import to from '../views/to.vue'
 import tanchuan from '../views/eventBus/tanchuan.vue'
 import four from '../views/four.vue'
 import fors from '../views/eventBus/fors.vue'
+import tanchuan2 from '../views/eventBus/tanchuan2.vue'
 import five from '../views/five.vue'
 import review from '../views/review.vue'
 import six from '../views/six.vue'
@@ -94,6 +95,10 @@ const routes = [
         ]
     },
     {
+        path: '/tanchuan2',
+        name: 'tanchuan2',
+        component: tanchuan2,
+    }, {
         path: '/five',
         name: 'five',
         component: five,

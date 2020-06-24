@@ -2,23 +2,18 @@
   <!-- 二级路由嵌套 -->
   <!-- 子组件 -->
   <div class="aaa">
-    <h1>这是子组件页面</h1>
-    <router-link to="tanchuan2">
-      <h1>打开孙组件</h1>
-    </router-link>
+    <h1>这是孙组件</h1>
     <button @click="fnClose">点击关闭弹出层并传递值</button>
   </div>
 </template>
 
 <script>
 export default {
-  // 局部引入注册组件
-  components: {
-  },
+  components: {},
   props: {},
   data() {
     return {
-      txt: "这是子组件传递的参数"
+      txt: "这是孙组件传递的参数"
     };
   },
   watch: {},
@@ -28,7 +23,7 @@ export default {
       // this.$emit('acprop',txt)
       // eventBus里面一样的使用$emit方法
       // 使用方法和之前的$emit一样
-      window.eventBus.$emit("aceptParm",this.txt)
+      window.eventBus.$emit("aceptParmSun",this.txt)
       // 路由嵌套中 返回上一级路由
       this.$router.go(-1);
       // 动态跳转到指定路由（页面）中
@@ -42,7 +37,8 @@ export default {
     // 获取传递的参数
     // this.$route.params.txt
     // console.log(this.$route.params.arrayss);
-    window.eventBus.$on("Toparms",value=>{
+    window.eventBus.$on('Toparms',value=>{
+      console.log("aaa");
       console.log(value);
     })
   },
@@ -52,7 +48,7 @@ export default {
 <style scoped>
 .aaa {
   height: 100%;
-  background-color: rgba(100, 100, 100, 0.5);
+  background-color: red;
   opacity: 1;
   position: fixed;
   top: 0;

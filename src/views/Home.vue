@@ -14,7 +14,7 @@
     <!-- 复选框 -->
     <input type="checkbox" id="checkbox" v-model="checked">
     <router-link :to="{name:'fors',params:{aaa:'内容'}}">
-      <h3>点击跳转到for</h3>
+      <h3>eventBus传参机制</h3>
     </router-link>
     <router-link :to="{path:'/five',query:{msg}}">
       <p>跳转</p>
