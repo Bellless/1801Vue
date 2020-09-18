@@ -31,8 +31,8 @@
       <!-- 三元运算符 就相当于if else语句 -->
       <!-- 三元运算符中 后面的部分相当于else -->
       <!-- 三元运算符 一般用于动态改变类名 -->
-      <!-- <h3 :class="san?'h3one':'h3two'">三元运算符</h3> -->
-      <!-- <button @click="btnFont">改变字体颜色</button> -->
+      <h3 :class="san?'h3one':'h3two'">三元运算符</h3>
+      <button @click="btnFont">改变字体颜色</button>
 
       <!-- vue中循环语句 -->
       <!-- item 就是指循环一次返回的对象 如果要找到对象中的任意对象名 用item.对象名 的方式 -->

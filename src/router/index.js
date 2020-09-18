@@ -13,6 +13,7 @@ import review from '../views/review.vue'
 import six from '../views/six.vue'
 import stylusText from '../views/stylusText.vue'
 import styleTwo from '../views/styleTwo.vue'
+import axiosOne from '../views/axioss/one.vue'
 import child from '../views/父子组件传参/child.vue'
 
 // vue要想使用公用的组件 
@@ -128,7 +129,19 @@ const routes = [
         // 路由懒加载（ 需要的时候才加载进来 不需要的时候不加载）
         component: () =>
             import ('../views/父子组件传参/parent.vue')
+    }, {
+        path: "/axiosOne",
+        name: 'axiosOne',
+        component: axiosOne, 
     },
+    {
+        // 路由传参用到  path+query
+        // 路由传参用到 name+param
+        path: '/2020.9.15',
+        name: '2020.9.15',
+        component: () =>
+            import('../views/2020.9.15.vue'),
+    }
 ]
 
 const router = new VueRouter({

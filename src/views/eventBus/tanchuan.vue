@@ -1,4 +1,5 @@
 <template>
+import { log } from 'util';
   <!-- 二级路由嵌套 -->
   <!-- 子组件 -->
   <div class="aaa">
@@ -7,6 +8,7 @@
       <h1>打开孙组件</h1>
     </router-link>
     <button @click="fnClose">点击关闭弹出层并传递值</button>
+    <button @click="fnPar">父组件触发某个事件</button>
   </div>
 </template>
 
@@ -33,7 +35,12 @@ export default {
       this.$router.go(-1);
       // 动态跳转到指定路由（页面）中
       // this.$router.push({path:""})
+    },
+    fnPar(){
+      console.log("aaa");
+       window.eventBus.$emit("updata")
     }
+
   },
   created() {
     // 默认先执行created里面的东西

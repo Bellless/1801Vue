@@ -6,6 +6,7 @@
   <!-- 父子组件传参第一种写法 props -->
   <!-- :parms='msg'父组件的写法 -->
   <!-- 子组件传递给父组件 采用$emit()的写法 -->
+  <!-- :可以用来直接在页面结构上  找到data数据源里面的东西 -->
   <childs @event="aceptParms" :parms='msg'/>
 </div>
 </template>
@@ -29,7 +30,11 @@ export default {
       this.chld=val
     }
   },
-  created(){},
+  created(){
+     window.eventBus.$on("updata",()=>{
+       alert("aaa")
+     })
+  },
   mounted(){}
 }
 </script>

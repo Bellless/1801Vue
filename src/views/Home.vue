@@ -21,7 +21,7 @@
     </router-link>
     <button @click="btn">跳转</button>
     <br>
-    <!-- <router-link to='six'>二级路由(打开子组件)</router-link> -->
+    <router-link to='six'>二级路由(打开子组件)</router-link>
     <router-view></router-view>
     <common_one @acprop='childToParent' :users='users' />
     <router-link to="/one2">
@@ -31,19 +31,38 @@
       <button>父子组件传参测试</button>
     </router-link>
     <br>
+    <br>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/stylusText">stylus测试 |</router-link>
     <router-link to="/styleTwo">styes测试2 |</router-link>
+    <br>
+    <br>
+    <router-link to="/axiosOne">axios请求</router-link>
     <!-- 路由传参 -->
     <!-- 1.父传参到子组件 -->
     <!-- 2.子组件传参到父组件 -->
     <!-- 3.兄弟组件传参 -->
     <!-- 父子组件传参测试 -->
+    <!-- v-for只能写在div身上 -->
+    <div v-for="(item,index) in users" :key="index">
+      <p v-text="item.name">item.name</p>
+      <p v-text="item.id">item.id</p>
+    </div>
+    <div>
+      <p v-if="checked">这是v-if</p>
+      <p v-else="checked">这是v-else</p>
+      <!-- v-on: == @ -->
+      <p v-on:click="aa">这是v-on</p>
+    </div>
+    <h1 :class="checked?'t1':'t2'">这是三元运算符</h1> 
+    <button @click="fnChange">动态改变标签颜色</button> 
+    <button>跳转到页面去</button>
   </div>
 </template>
 
 <script>
+var btn=0;
 export default {
   name: "Home",
   components: {},
@@ -57,6 +76,7 @@ export default {
       text: "",
       h2: "这是data里面的数据",
       checked: false,
+      checkedThree:true,
       checkedtwo: "",
       message: "这是父组件传递的参数",
       users: [{ id: 1, name: "Henry" }, { id: 2, name: "Tom" }]
@@ -85,7 +105,29 @@ export default {
     },
     childToParent(val) {
       console.log(val);
+    },
+    aa(){
+      alert("aaa")
+    },
+    fnChange(){
+      btn++;
+      if(btn%2==0){
+        this.checked=false;
+      }else{
+        this.checked=true;
+      }
     }
   }
 };
 </script>
+<style scoped>
+  .t1{
+    color: red;
+    font-size: 30px;
+  }
+  .t2{
+    color: yellow;
+    font-size: 30px;
+  }
+</style>
+
